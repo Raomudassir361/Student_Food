@@ -1,0 +1,97 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #d17341, #f6e7b9); 
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Container ko center karne ke liye */
+.order-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Thora sa white background taaki form saaf dikhe */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px; /* 760px bohot zyada tha, 600px behtar hai */
+}
+
+.form1 {
+    padding: 30px;
+}
+
+.form1 h2 {
+    color: #853131;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #853131;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+}
+
+.order-btn {
+    width: 100%;
+    background-color: #b30000;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #800000;
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 480px) {
+    .order-section {
+        padding: 20px 10px;
+    }
+    
+    .form1 {
+        padding: 20px;
+    }
+
+    .form1 h2 {
+        font-size: 22px;
+    }
+}

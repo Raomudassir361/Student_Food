@@ -1,0 +1,75 @@
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Screen se bahar nikalne wali cheezon ko rokay ga */
+}
+
+.div1 {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/hero-background1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Fixed 907px ki jagah screen ki poori height */
+    width: 100%;
+}
+
+/* Hero Section Styling */
+.hero {
+    color: white;
+    text-align: left;
+    width: 90%; /* Mobile par 90% screen le ga */
+    max-width: 600px; /* Bare desktop par 600px se bara nahi hoga */
+    margin-left: 5%; /* Side se barabar gap */
+    padding-top: 100px; /* Navbar se fasla */
+}
+
+.hero h1 {
+    font-size: clamp(28px, 8vw, 60px); /* Screen size ke hisab se font khud chota/bara hoga */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ff4d4d; /* Bright red for visibility */
+}
+
+.hero p {
+    font-size: clamp(16px, 4vw, 22px);
+    margin-bottom: 30px;
+    color: white;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: #b30000;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center; /* Mobile par center alignment behtar lagti hai */
+        margin: 0 auto;
+        padding-top: 120px;
+    }
+    
+    .div1 {
+        height: auto;
+        padding-bottom: 50px;
+    }
+}

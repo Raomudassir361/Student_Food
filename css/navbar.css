@@ -1,0 +1,101 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Padding handling ke liye zaroori hai */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #800000;
+    align-items: center;
+    width: 100%;
+    min-height: 9vh; /* Fixed height ki jagah min-height */
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 28px; /* Desktop ke liye thora balance kiya */
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: burlywood;
+    font-family: "Papyrus", "Courier New", monospace;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .5s;
+    display: block;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    background-color: #b30000;
+    border-radius: 5px;
+}
+
+/* --- Responsive Media Query (Mobile & Tablets) --- */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Logo upar aur links niche aa jayenge */
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .navbar .logo {
+        margin-left: 0;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Links ko ek line mein rakhega magar wrap karega */
+        flex-wrap: wrap; 
+        justify-content: center;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 5px;
+    }
+
+    .navbar ul li a {
+        padding: 8px 12px;
+        font-size: 12px; /* Choti screen par text chota */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column; /* Bilkul chote mobile par links upar-niche */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar ul li a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}

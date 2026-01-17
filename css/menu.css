@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom right, #d17341, #f6e7b9);
+    background-size: cover;
+    background-attachment: fixed; /* Background ko scroll ke sath fix rakhega */
+    min-height: 100vh; /* Fixed 1200px height hata di taaki content ke mutabiq barhe */
+    padding-bottom: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap; /* Sahi property (flex: wrap ghalat tha) */
+    justify-content: center; /* Items ko beech mein lane ke liye */
+    gap: 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 280px; /* Desktop par width */
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Scale ki jagah translateY zyada modern lagta hai */
+}
+
+.menu-item img {
+    width: 100%; /* Image container ki width ke mutabiq hogi */
+    max-width: 240px; 
+    height: 180px;
+    object-fit: cover; /* Image kharab (stretch) nahi hogi */
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    margin: 15px 0 10px;
+    color: #990000;
+    font-size: 22px;
+}
+
+.menu-item p {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b30000;
+    padding: 12px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    color: #b30000;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablets (iPad etc) */
+@media (max-width: 768px) {
+    .menu {
+        padding: 20px;
+    }
+    .menu-item {
+        width: 45%; /* Ek line mein 2 items */
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%; /* Ek line mein 1 item */
+        max-width: 320px;
+    }
+    
+    .menu-item img {
+        height: 200px;
+    }
+    
+    .container {
+        padding-top: 20px;
+    }
+}

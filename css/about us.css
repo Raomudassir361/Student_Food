@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Isse padding width se bahar nahi nikalti */
+}
+
+body {
+    background-image: url("../images/818dca7e-7c81-43d6-8798-989574f92318.jfif");
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-us {
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Thora dark background taaki text nazar aaye */
+    padding: 40px;
+    max-width: 900px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: 50px auto; /* Isse box center ho jayega */
+    text-align: left;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    color: #a30000;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    width: 100%; /* Fixed 500px hata kar 100% kar diya */
+}
+
+.about-us h2 {
+    font-size: 28px;
+    color: #a30000;
+    margin-top: 30px;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Mobile Devices (768px se niche) */
+@media (max-width: 768px) {
+    .about-us {
+        margin: 20px; /* Side margins kam kar diye */
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .about-us h1 {
+        font-size: 28px;
+    }
+
+    .about-us h2 {
+        font-size: 22px;
+    }
+
+    .about-us p {
+        font-size: 16px;
+    }
+}
